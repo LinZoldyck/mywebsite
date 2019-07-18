@@ -4,3 +4,42 @@
     margin-left: 31%;
     margin-top: 1%;
 }
+
+#add-style-profil-photo{
+    width:50%;
+    border-radius: 100%;
+    image-orientation: 180deg;
+}
+#add-style-rslogo{
+    width:20%;
+    margin-right:3%;
+}
+.add-style-sidespace{
+    margin-left:-8%;
+}
+.add-style-headline{
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+}
+.add-style-corps{
+    font-style: italic;
+    font-weight: 550;
+
+}
+.add-style-citation{
+    font-style: italic;
+    font-weight: lighter;
+
+}
+
+.default-pp{
+    width:150px;
+    height:150px;
+    background-color: grey;
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-top:25%;
+    margin-right:25%;
+    margin-bottom:5%;
+}

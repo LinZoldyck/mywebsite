@@ -9,12 +9,10 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"
         media="screen,projection" />
-
     <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-
 <body>
     <header>
         <nav>
@@ -44,10 +42,82 @@
         <div class="container">
             <br>
             <div class = "row">
-                <div class="col s12 z-depth-1">
-                    <p>Bonjour, Je m'appelle Hermann</p>
+                <div class="col s12 ">
+                    <p class="add-style-headline">Bonjour, Je m'appelle Hermann.<br>Bienvenue sur mon site !</p>
+                    <p  style="text-align: center" class="add-style-citation">"A propos"</p>
                 </div>
-
+            </div>
+            <br>
+            <div class="row z-depth-1">
+                <div class="col s12 ">
+                    <div class="default-pp">
+                    </div>
+                    <!--<img id="add-style-profil-photo"src="{% static 'images/photo-profil.jpg' %}">-->
+                </div>
+                <div class="col s12">
+                    <div class="row">
+                        <div class=" offset-s4 col s6 ">
+                            <a href=""><img id ="add-style-rslogo" class="add-style-sidespace" src="{% static '/images/linkedin.png' %}"></a>
+                            <a href=""><img id="add-style-rslogo" src="{% static '/images/logo-instagram.png' %}"></a>
+                            <a href=""><img id="add-style-rslogo" src="{% static '/images/github.png' %}"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p style="text-align: center" class="add-style-corps">Je suis un Hardcore Leaner</p><br>
+                            <p style="text-align: center;margin-top:-5%; font-size: 1.5em">Hermann Soulton-Agboton</p>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class=" offset-s2 col s1">
+                                    <a><i class="material-icons">work</i> </a>
+                                </div>
+                                <div class="col s5">
+                                     <span>Alternant Ingénieur</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class=" offset-s2 col s1">
+                                        <a><i class="material-icons">add_location</i> </a>
+                                    </div>
+                                    <div class="col s8">
+                                         <span> Région Rhone Alpes</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class=" offset-s2 col s1">
+                                        <a><i class="material-icons">calendar_view_day</i> </a>
+                                    </div>
+                                    <div class="col s8">
+                                         <span> 22 ans</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class=" offset-s2 col s4">
+                                    <a href="" class="waves-effect green btn">CONTACT</a>
+                                </div>
+                                <div class="col s5">
+                                        <a href="" class="waves-effect light-blue btn">A propos</a>
+                                    </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="center">Portfolio</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class ="  col s5 z-depth-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.?</p>
+                </div>
+                <div class ="offset-s2 col s5 z-depth-1">
+                    <p> Rem praesentium dolor quibusdam fuga nostrum facilis sint illo</p>
+                </div>
             </div>
         </div>
     </main>
