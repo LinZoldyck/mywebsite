@@ -5,3 +5,4 @@ from . models import *
 admin.site.register(Master)
 admin.site.register(ProExperience)
 admin.site.register(Education)
+admin.site.register(Citation)

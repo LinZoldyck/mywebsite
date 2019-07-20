@@ -13,6 +13,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,137 +22,63 @@
                         src="{% static 'images/logo.png' %}"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="">Blog</a></li>
+                    <li><a href="{% url 'page:page_index'%}">Acceuil</a></li>
+                    <li><a href="{% url 'blog:blog_index'%}">Blog</a></li>
                     <li><a href="">Mes applications</a></li>
-                    <li><a href="">A propos</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="{% url 'page:page_about'%}">A propos</a></li>
+                    <li><a href="{% url 'page:page_contact'%}">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="">Acceuil</a></li>
-            <li><a href="">Blog</a></li>
+            <li><a href="{% url 'page:page_index'%}">Acceuil</a></li>
+            <li><a href="{% url 'blog:blog_index'%}">Blog</a></li>
             <li><a href="">Mes applications</a></li>
-            <li><a href="">A propos</a></li>
-            <li><a href="">Contact</a></li>
-
+            <li><a href="{% url 'page:page_about'%}">A propos</a></li>
+            <li><a href="{% url 'page:page_contact'%}">Contact</a></li>
         </ul>
-    </header>
+        </header>
     <main>
         <div class="container">
             <br>
-            <div class = "row">
-                <div class="col s12 ">
-                    <p class="add-style-headline">Bonjour, Je m'appelle Hermann.<br>Bienvenue sur mon site !</p>
-                    <p  style="text-align: center" class="add-style-citation">"A propos"</p>
-                </div>
-            </div>
-            <br>
-            <div class="row z-depth-1">
-                <div class="col s12 ">
-                    <div class="default-pp">
-                    </div>
-                    <!--<img id="add-style-profil-photo"src="{% static 'images/photo-profil.jpg' %}">-->
-                </div>
-                <div class="col s12">
-                    <div class="row">
-                        <div class=" offset-s4 col s6 ">
-                            <a href=""><img id ="add-style-rslogo" class="add-style-sidespace" src="{% static '/images/linkedin.png' %}"></a>
-                            <a href=""><img id="add-style-rslogo" src="{% static '/images/logo-instagram.png' %}"></a>
-                            <a href=""><img id="add-style-rslogo" src="{% static '/images/github.png' %}"></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <p style="text-align: center" class="add-style-corps">Je suis un Hardcore Leaner</p><br>
-                            <p style="text-align: center;margin-top:-5%; font-size: 1.5em">Hermann Soulton-Agboton</p>
-                        </div> 
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="row">
-                                <div class=" offset-s2 col s1">
-                                    <a><i class="material-icons">work</i> </a>
-                                </div>
-                                <div class="col s6">
-                                     <span>Alternant Ingénieur</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                    <div class=" offset-s2 col s1">
-                                        <a><i class="material-icons">add_location</i> </a>
-                                    </div>
-                                    <div class="col s8">
-                                         <span> Région Rhone Alpes</span>
-                                    </div>
-                            </div>
-                            <div class="row">
-                                    <div class=" offset-s2 col s1">
-                                        <a><i class="material-icons">calendar_view_day</i> </a>
-                                    </div>
-                                    <div class="col s8">
-                                         <span> 22 ans</span>
-                                    </div>
-                            </div>
-                            <div class="row">
-                                <div class=" offset-s2 col s4">
-                                    <a href="" class="waves-effect green btn">CONTACT</a>
-                                </div>
-                                <div class="col s5">
-                                        <a href="" class="waves-effect light-blue btn">A propos</a>
-                                    </div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <h5 class="center">Portfolio</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class ="  col s5 z-depth-1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.?</p>
-                </div>
-                <div class ="offset-s2 col s5 z-depth-1">
-                    <p> Rem praesentium dolor quibusdam fuga nostrum facilis sint illo</p>
-                </div>
-            </div>
+            {% block content %}{% endblock content %}
         </div>
     </main>
-    <footer class="page-footer red lighten 5">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text flow-text">Reseaux Sociaux</h5>
-                    <div class="row">
-                        <div class="col s2">
-                            <a href=""><img id="add-style-footer-rs-logo"  src="{% static 'images/linkedin-black.png' %}"></a>
-                        </div>
-                        <div class=" pull-s1 col s2">
-                            <a href=""><img id="add-style-footer-rs-logo" class="" src="{% static 'images/github.png' %}"></a>
-                        </div>
-                        <div class=" pull-s2 col s2">
-                            <a href=""><img id="add-style-footer-rs-logo"  src="{% static 'images/logo-instagram.png' %}"></a>
+
+            <footer class="page-footer red lighten 5">
+                <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text flow-text">Reseaux Sociaux</h5>
+                        <div class="row">
+                            <div class="col s2">
+                                <a href=""><img id="add-style-footer-rs-logo"
+                                        src="{% static 'images/linkedin-black.png' %}"></a>
+                            </div>
+                            <div class=" pull-s1 col s2">
+                                <a href=""><img id="add-style-footer-rs-logo" class=""
+                                        src="{% static 'images/github.png' %}"></a>
+                            </div>
+                            <div class=" pull-s2 col s2">
+                                <a href=""><img id="add-style-footer-rs-logo"
+                                        src="{% static 'images/logo-instagram.png' %}"></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="col l4 offset-l2 s12">
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="">Blog</a></li>
+                            <li><a class="grey-text text-lighten-3" href="">Contact</a></li>
+                            <li><a class="grey-text text-lighten-3" href="">A propos</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="">Blog</a></li>
-                        <li><a class="grey-text text-lighten-3" href="">Contact</a></li>
-                        <li><a class="grey-text text-lighten-3" href="">A propos</a></li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-        <div class="footer-copyright sticky">
-            <div class="container">
-                © 2019 Design by H.Soulton-Agboton
-            </div>
-        </div>
+                <div class="footer-copyright sticky">
+                <div class="container">
+                    © 2019 Design by H.Soulton-Agboton
+                </div>
+                </div>
     </footer>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
