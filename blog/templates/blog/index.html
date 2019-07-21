@@ -9,12 +9,13 @@
         </div>
     </div>
     <div class=" col l6">
+        {% for post in Posts %}
         <div class="row">
             <div class=" center col l1">
                 <i class=" blog-icon-color material-icons small">calendar_today </i>
             </div>
             <div class=" center col l4">
-                <span class="blog-date"> date </span>
+                <span class="blog-date">{{ post.date_posted }}</span>
             </div>
         </div>
         <div class="card">
@@ -24,16 +25,17 @@
             <a href="" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i
                     class="material-icons">edit</i></a>
             <div class="card-content">
-                <h5>First-article</h5>
-                <p>Ceci est un résumé de l'article de blog</p>
+                <h5>{{ post.title }}</h5>
+                <p>{{ post.summary }}</p>
             </div>
             <div class="card-action">
-                <a class="btn-small waves-effect waves-light blue" href="">Lire</a>
+                <a class="btn-small waves-effect waves-light blue" href="{% url 'blog:blog_view' post.id %}">Lire</a>
             </div>
         </div>
         <br>
         <br>
         <br>
+    {% endfor %}
     </div>
     <div id="view-port-mobile-visibility">
         <div class="col l3 offset-l1 z-depth-1">

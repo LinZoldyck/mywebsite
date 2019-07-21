@@ -9,14 +9,16 @@
 </div>
 <br>
 <div class="row z-depth-1">
-    <div class="col s12 ">
-        <div class="default-pp">
-        </div>
-        <!--<img id="add-style-profil-photo"src="{% static 'images/photo-profil.jpg' %}">-->
-    </div>
-    <div class="col s12">
+    <div class="col s12 l6 ">
         <div class="row">
-            <div class=" offset-s4 col s6 ">
+                <div class = "col s12 l6">
+                        <div class="default-pp">
+                                <img id="add-style-profil-photo"src="{% static 'images/pp.jpg' %}">
+                            </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class=" offset-s4 offset-l4 offset-m5 col s6 l4 m4 ">
                 <a href=""><img id="add-style-rslogo" class="add-style-sidespace"
                         src="{% static '/images/linkedin.png' %}"></a>
                 <a href=""><img id="add-style-rslogo" src="{% static '/images/logo-instagram.png' %}"></a>
@@ -24,13 +26,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s12">
-                <p style="text-align: center" class="add-style-corps">{{ master.motto }}</p><br>
+                <div class="offset-l1 col s12 l9">
+                    <p style="text-align: center" class="add-style-corps">{{ master.motto }}</p><br>
+                </div>
+            </div>
+    </div>
+    <div class="col s12 l6">
+        <div id ="add-style-topspace">
+                
+        </div>
+        <div class="row">
+            <div class="col s12 l11">
                 <p style="text-align: center;margin-top:-5%; font-size: 1.5em">{{ master.name }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col s12">
+            <div class="offset-m2 col s12">
                 <div class="row">
                     <div class=" offset-s2 col s1">
                         <a><i class="material-icons">work</i> </a>
@@ -56,7 +67,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class=" offset-s2 col s4">
+                    <div class=" offset-s2 offset-m2 col s4 m3">
                         <a href="{% url 'page:page_contact'%}" class="waves-effect green btn">CONTACT</a>
                     </div>
                     <div class="col s5">
@@ -73,10 +84,10 @@
     </div>
 </div>
 <div class="row">
-    <div class="  col s5 z-depth-1">
+    <div class="  col s5 l4 z-depth-1">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.?</p>
     </div>
-    <div class="offset-s2 col s5 z-depth-1">
+    <div class="offset-s2 offset-l1 col s5 l4 z-depth-1">
         <p> Rem praesentium dolor quibusdam fuga nostrum facilis sint illo</p>
     </div>
 </div>

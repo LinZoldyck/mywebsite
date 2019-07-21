@@ -6,9 +6,11 @@
 }
 
 #add-style-profil-photo{
-    width:50%;
+    width:200px;
+    height: 200px;
     border-radius: 100%;
-    image-orientation: 180deg;
+    
+    
 }
 #add-style-rslogo{
     width:20%;
@@ -25,6 +27,7 @@
 .add-style-corps{
     font-style: italic;
     font-weight: 550;
+    margin-left:-1%
 
 }
 .add-style-citation{
@@ -40,23 +43,88 @@
 .default-pp{
     width:150px;
     height:150px;
-    background-color: grey;
     border-radius: 50%;
-    margin-left: 25%;
-    margin-top:25%;
+    margin-left: 17%;
+    margin-top:10%;
     margin-right:25%;
-    margin-bottom:5%;
+    margin-bottom:13%;
 }
+
+.blog-icon-color{
+    color:red;
+    margin-top:-5px;
+    }
+
 @media only screen and (min-width:361px) and (max-width:420px){
     #view-port-mobile-visibility{
        display: none;
        
     } 
+    #add-style-topspace{
+        display:none;
+    }
  }
  
- @media only screen and (min-width: 768px) and (max-width:992px){
+ @media only screen and (min-width: 768px) and (max-width:835px){
     #view-port-desktop-visibility{
        display: none;
     }
+    .default-pp{
+        width:150px;
+        height:150px;
+        border-radius: 50%;
+        margin-left: 36.5%;
+        margin-top:10%;
+        margin-right:25%;
+        margin-bottom:13%;
+    }
+    #add-style-brand-logo{
+        width: 17%;
+        margin-left: 40%;
+        margin-top:-0.06%
+       
+    }
+    .add-style-corps{
+        font-style: italic;
+        font-weight: 550;
+        margin-left:4%
+    }
+    #add-style-rslogo{
+        width:20%;
+        margin-right:3%;
+        margin-top:3%
+    }
 }
- 
+
+@media only screen and (min-width:992px){
+    #add-style-brand-logo{
+        width: 14%;
+        margin-left: 20%;
+        margin-top:-0.15%
+       
+    }
+    .default-pp{
+        width:150px;
+        height:150px;
+        border-radius: 50%;
+        margin-left: 50%;
+        margin-top:10%;
+        margin-right:25%;
+        margin-bottom:13%;
+    }
+    #add-style-rslogo{
+        width:20%;
+        margin-right:3%;
+        margin-top:3%
+    }
+    #add-style-topspace{
+        width:100%;
+        height:65px;
+    }
+    .add-style-corps{
+        font-style: italic;
+        font-weight: 550;
+        margin-left:-4%
+    
+    }
+}
