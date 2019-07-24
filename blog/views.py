@@ -1,6 +1,13 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.forms import ModelForm
 from . models import Post
 # Create your views here.
+class PostForm (ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'summary', 'date_posted', 'author']
+
+
 
 def index(request):
     template = 'blog/index.html'

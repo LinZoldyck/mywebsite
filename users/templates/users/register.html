@@ -1,0 +1,23 @@
+{% extends 'application.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="row">
+        <form  class ="col s12" method ="POST">{% csrf_token %}
+            <div class ="row">
+                <fieldset class = "col s12 ">
+                    {{ form|crispy}}
+                </fieldset>
+            </div>
+            <div class ="row">
+                <div class="col s4">
+                    <button class = "btn-small waves-effect waves-light blue " type ="submit">S'inscrire</button>
+                </div>
+            </div>
+        </form>
+        <div class ="row">
+            <div class="col s4">
+                <a href=""><p>Déjà inscire ?</p></a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
