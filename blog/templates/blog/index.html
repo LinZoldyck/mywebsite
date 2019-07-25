@@ -15,7 +15,7 @@
                 <i class=" blog-icon-color material-icons small">calendar_today </i>
             </div>
             <div class=" center col l4">
-                <span class="blog-date">{{ post.date_posted }}</span>
+                <span class="blog-date">{{ post.date_posted|date:"D d M, Y" }}</span>
             </div>
         </div>
         <div class="card">
