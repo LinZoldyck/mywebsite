@@ -1,14 +1,11 @@
 {% extends 'application.html' %}
 {% block content %}
-    <div class ="row">
-           
-            <form class="col s8"  method="post">
+        {{ form.media }}
+    <div class ="row" >
+            <form class="col s8"  method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                {{ form.as_p }}
-               <input type="submit" value="submit">
+               <input type="submit" value="save">
             </form>
-        
     </div>
-
-
 {% endblock content %}

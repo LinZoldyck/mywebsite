@@ -1,0 +1,21 @@
+{% extends 'application.html' %}
+{% load static %}
+{% block content %}
+<h2> Vous avez été correctement déconnecté</h2>
+<div class ="divider">
+
+</div>
+<div class = "row">
+    <div class = "col s12">
+        <small>
+            <a  href="{% url 'login' %}">Se connecter</a>
+        </small>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

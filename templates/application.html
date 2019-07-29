@@ -2,6 +2,7 @@
 {% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,20 +13,43 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
     <header>
+        <ul id="dropdown1" class="dropdown-content">
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Déconnexion</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Se connecter</a></li>
+            <li><a href="{% url 'logout' %}">Créer un compte</a></li>
+            {% endif %}
+
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Déconnexion</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Se connecter</a></li>
+            <li><a href="{% url 'register' %}">Créer un compte</a></li>
+            {% endif %}
+        </ul>
         <nav>
             <div class="nav-wrapper red lighten 5">
                 <a href="{% url 'page:page_index' %}" class="brand-logo"> <img id="add-style-brand-logo"
                         src="{% static 'images/logo.png' %}"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{% url 'page:page_index'%}">Acceuil</a></li>
                     <li><a href="{% url 'blog:blog_index'%}">Blog</a></li>
                     <li><a href="">Mes applications</a></li>
                     <li><a href="{% url 'page:page_about'%}">A propos</a></li>
                     <li><a href="{% url 'page:page_contact'%}">Contact</a></li>
-                    <li><a href="{% url 'register' %}"><i class="material-icons">account_box</i></a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}">Mon profil</a></li>
+                    {% endif %}
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2"><i
+                                class="material-icons">account_box</i></a></li>
                 </ul>
             </div>
         </nav>
@@ -35,60 +59,66 @@
             <li><a href="">Mes applications</a></li>
             <li><a href="{% url 'page:page_about'%}">A propos</a></li>
             <li><a href="{% url 'page:page_contact'%}">Contact</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Mon profil</a></li>
+            {% endif %}
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i
+                        class="material-icons">account_box</i></a></li>
         </ul>
-        </header>
+
+    </header>
     <main>
         <div class="container">
 
             {% if messages %}
-                <br>
-                {% for message in messages %}
-                    <div class ="row">
-                        <div class="alert alert-{{ message.tags }}">
-                            {{ message }}
-                        </div>
-                    </div>
-                {% endfor %}
+            <br>
+            {% for message in messages %}
+            <div class="row">
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            </div>
+            {% endfor %}
             {% endif %}
             <br>
             {% block content %}{% endblock content %}
         </div>
     </main>
 
-            <footer class="page-footer red lighten 5">
-                <div class="container">
-                <div class="row">
-                    <div class="col l6 s12 m7">
-                        <h5 class="white-text flow-text">Reseaux Sociaux</h5>
-                        <div class="row">
-                            <div class="col s2">
-                                <a href=""><img id="add-style-footer-rs-logo"
-                                        src="{% static 'images/linkedin-black.png' %}"></a>
-                            </div>
-                            <div class=" pull-s1 col s2">
-                                <a href=""><img id="add-style-footer-rs-logo" class=""
-                                        src="{% static 'images/github.png' %}"></a>
-                            </div>
-                            <div class=" pull-s2 col s2">
-                                <a href=""><img id="add-style-footer-rs-logo"
-                                        src="{% static 'images/logo-instagram.png' %}"></a>
-                            </div>
+    <footer class="page-footer red lighten 5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12 m7">
+                    <h5 class="white-text flow-text">Reseaux Sociaux</h5>
+                    <div class="row">
+                        <div class="col s2">
+                            <a href=""><img id="add-style-footer-rs-logo"
+                                    src="{% static 'images/linkedin-black.png' %}"></a>
+                        </div>
+                        <div class=" pull-s1 col s2">
+                            <a href=""><img id="add-style-footer-rs-logo" class=""
+                                    src="{% static 'images/github.png' %}"></a>
+                        </div>
+                        <div class=" pull-s2 col s2">
+                            <a href=""><img id="add-style-footer-rs-logo"
+                                    src="{% static 'images/logo-instagram.png' %}"></a>
                         </div>
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="">Blog</a></li>
-                            <li><a class="grey-text text-lighten-3" href="">Contact</a></li>
-                            <li><a class="grey-text text-lighten-3" href="">A propos</a></li>
-                        </ul>
-                    </div>
                 </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="">Blog</a></li>
+                        <li><a class="grey-text text-lighten-3" href="">Contact</a></li>
+                        <li><a class="grey-text text-lighten-3" href="">A propos</a></li>
+                    </ul>
                 </div>
-                <div class="footer-copyright sticky">
-                <div class="container">
-                    © 2019 Design by H.Soulton-Agboton
-                </div>
-                </div>
+            </div>
+        </div>
+        <div class="footer-copyright sticky">
+            <div class="container">
+                © 2019 Design by H.Soulton-Agboton
+            </div>
+        </div>
     </footer>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>

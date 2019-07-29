@@ -7045,7 +7045,9 @@ $jscomp.polyfill = function (e, r, p, m) {
   $(document).ready(function () {
     // Text based inputs
     var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
-
+    
+    $(".dropdown-trigger").dropdown();
+        
     // Add active if form auto complete
     $(document).on('change', input_selector, function () {
       if (this.value.length !== 0 || $(this).attr('placeholder') !== null) {
@@ -12373,3 +12375,4 @@ $jscomp.polyfill = function (e, r, p, m) {
   Range.init($('input[type=range]'));
 })(cash, M.anime);
 
+M.AutoInit()

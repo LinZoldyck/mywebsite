@@ -8,84 +8,93 @@
     </div>
 </div>
 <br>
-<div class = "row">
+<div class="row">
     <div class=" offset-l1 col l10">
-            <div class="row z-depth-1">
-                    <div class="col s12 l6 ">
-                        <div class="row">
-                                <div class = "col s12 l6">
-                                        <div class="default-pp">
-                                                <img id="add-style-profil-photo"src="{% static 'images/pp.jpg' %}">
-                                            </div>
-                                </div>
+        <div class="row z-depth-1">
+            <div class="col s12 l6 ">
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="default-pp">
+                            <img id="add-style-profil-photo" src="{% static 'images/pp.jpg' %}">
                         </div>
-                        <div class="row">
-                            <div class=" offset-s4 offset-l4 offset-m5 col s6 l4 m4 ">
-                                <a href=""><img id="add-style-rslogo" class="add-style-sidespace"
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class = "row">
+                            <div class = " offset-s3  col s2  center">
+                                    <a href=""><img id="add-style-rslogo"
                                         src="{% static '/images/linkedin.png' %}"></a>
-                                <a href=""><img id="add-style-rslogo" src="{% static '/images/logo-instagram.png' %}"></a>
-                                <a href=""><img id="add-style-rslogo" src="{% static '/images/github.png' %}"></a>
+                            </div>
+                            <div class = "col center s2">
+                                    <a href=""><img id="add-style-rslogo" src="{% static '/images/logo-instagram.png' %}"></a>
+                            </div>
+                            <div class ="col center s2">
+                                    <a href=""><img id="add-style-rslogo" src="{% static '/images/github.png' %}"></a>
                             </div>
                         </div>
-                        <div class="row">
-                                <div class="offset-l1 col s12 l9">
-                                    <p style="text-align: center" class="add-style-corps">{{ master.motto }}</p><br>
-                                </div>
-                            </div>
+                        
                     </div>
-                    <div class="col s12 l5">
-                        <div id ="add-style-topspace">
-                                
-                        </div>
-                        <div class="row">
-                            <div class="col s12 offset-l1 l10">
-                                <p style="text-align: center;margin-top:-5%; font-size: 1.5em">{{ master.name }}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="offset-m2 col s12 pull-l2">
-                                <div class="row">
-                                    <div class=" offset-s2 col s1">
-                                        <a><i class="material-icons">work</i> </a>
-                                    </div>
-                                    <div class="col s6">
-                                        <span>{{ master.occupation }}</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class=" offset-s2 col s1">
-                                        <a><i class="material-icons">add_location</i> </a>
-                                    </div>
-                                    <div class="col s8">
-                                        <span>{{ master.location }}</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class=" offset-s2 col s1">
-                                        <a><i class="material-icons">calendar_view_day</i> </a>
-                                    </div>
-                                    <div class="col s8">
-                                        <span> 22 ans</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class=" offset-s2 offset-m2 offset-l2  col s4 m3 l4">
-                                        <a href="{% url 'page:page_contact'%}" class="waves-effect green btn">CONTACT</a>
-                                    </div>
-                                    <div class="col s5">
-                                        <a href="{% url 'page:page_about' %}" class="waves-effect light-blue btn">A propos</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="offset-l1  col s12 l9">
+                        <p style="text-align: center" class="add-style-corps" >{{ master.motto }}</p><br>
                     </div>
+                </div>
             </div>
+            <div class="col s12 l5">
+                <div id="add-style-topspace">
+
+                </div>
+                <div class="row">
+                    <div class="col s12 offset-l1 l10">
+                        <p style="text-align: center;margin-top:-5%; font-size: 1.5em">{{ master.name }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-m2 col s12 pull-l2">
+                        <div class="row">
+                            <div class=" offset-s2 col s1">
+                                <a><i class="material-icons">work</i> </a>
+                            </div>
+                            <div class="col s6">
+                                <span>{{ master.occupation }}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" offset-s2 col s1">
+                                <a><i class="material-icons">add_location</i> </a>
+                            </div>
+                            <div class="col s8">
+                                <span>{{ master.location }}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" offset-s2 col s1">
+                                <a><i class="material-icons">calendar_view_day</i> </a>
+                            </div>
+                            <div class="col s8">
+                                <span> 22 ans</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" offset-s2 offset-m2 offset-l2  col s4 m3 l4">
+                                <a href="{% url 'page:page_contact'%}" class="waves-effect green btn">CONTACT</a>
+                            </div>
+                            <div class="col s5">
+                                <a href="{% url 'page:page_about' %}" class="waves-effect light-blue btn">A propos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="row">
     <div class="col s12">
-        <h5 class="center">Portfolio</h5>
+        <h5 class="center add-style-headline">Projet</h5>
     </div>
 </div>
 <div class="row">

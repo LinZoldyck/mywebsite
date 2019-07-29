@@ -5,43 +5,47 @@
     <div class=" offset-l2 col l8 s12 z-depth-1">
         <div class="row">
             <div class="col s12">
-                <h4 class=" add-style-headline">Inscrivez-vous !</h4>
+                <h4 class=" add-style-headline">Connectez-vous</h4>
             </div>
         </div>
         <div class="divider"></div>
         <br>
         {{ form.non_field_errors }}
-        <form method ="POST" class="col s12 offset-s1">
+        <form method="POST" class="col s12 offset-s1">
             {% csrf_token %}
             {% for field in form %}
             <div class="row">
-                <div class=" col s8">
-                    <div class="row">
-                        <div class="col s8">
-                            {{ field.errors }}
+                    <div class=" col s8">
+                        <div class="row">
+                            <div class="col s8">
+                                {{ field.errors }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s8">
-                            {{ field.label_tag }} {{ field }}
+                        <div class="row">
+                            <div class="col s8">
+                                {{ field.label_tag }} {{ field }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
             <div class="row">
                 <div class="col s12 ">
-                    <button class="btn  waves-effect waves-light blue" type="submit">Submit 
+                    <button class="btn  waves-effect waves-light blue" type="submit">Connexion
                         <i class="material-icons right">send</i></button>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 ">
-                    <a href="{% url 'login'%}">Déjà un compte ? Connectez-vous </a>
+                   <a href="{% url 'register' %}">Besoin d'un compte ? Inscrivez-vous</a>
                 </div>
             </div>
 
         </form>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
 {% endblock content %}
